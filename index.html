@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="utf-8"/>
+     <meta name="viewport" content="=width=device-width, initial-scale=1.0"/>
+     <title>Web dev test</title>
+     <link rel="stylesheet" href="style.css">
+
+     <link rel="stylesheet"
+     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+     
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    </head>
+ <body>
+
+
+    <header>
+        <a href="#" class="logo">4MM1 - BSBA</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">FS Titles</a></li>
+            <li><a href="#menu">Ampalaya Wine</a></li>
+            <li><a href="#service">Edible Straw</a></li>
+            <li><a href="#contact">Rice Coffee</a></li>
+        </ul>
+    </header>
+
+            <a href="#"></a>
+
+            <li><a href="#ampalaya"></a></li>
+            <li><a href="#ediblesc"></a></li>
+            <li><a href="#rice2"></a></li>
+            <li><a href="#foot"></a></li>
+
+<!--------------->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>RESEARCH<br>TITLE PROPOSAL</h1>
+            <p> </p>
+            <a href="#foot" class="btn"> Learn More <span>&#x27F6;</span></a>
+
+        </div>
+
+            <div class="home-img">
+                <img src="img/wesleyan.png">
+
+             </div>
+<!--------tryyyyyyy---------->
+    </section>
+
+
+
+    <div class="fabs" onclick="toggleBtn()">
+        <div class="action">
+            <i class='bx bx-share' id="add"></i>
+            <i class='bx bx-x' id="remove" style="display: none"></i>
+        </div>
+  
+        <div class="btns">
+          <a href="#" class="btn1" style="background: #3b5999"
+            ><i class='bx bxl-facebook-circle'></i></a>
+
+          <a href="#" class="btn1" style="background: #55acee"
+            ><i class='bx bxl-twitter'></i></a>
+
+          <a href="#" class="btn1" style="background: #000000"
+            ><i class='bx bxl-tiktok'></i></a>
+
+          <a href="#" class="btn1" style="background:#e4405f"
+            ><i class='bx bxl-instagram'></i></a>
+
+        </div>
+      </div>
+    </body>
+    <script>
+      function toggleBtn() {
+        const Btns = document.querySelector(".btns");
+        const add = document.getElementById("add");
+        const remove = document.getElementById("remove");
+        const btn = document.querySelector(".btns").querySelectorAll("a");
+        Btns.classList.toggle("open");
+        if (Btns.classList.contains("open")) {
+          remove.style.display = "block";
+          add.style.display = "none";
+          btn.forEach((e, i) => {
+            setTimeout(() => {
+              bottom = 40 * i;
+              e.style.bottom = bottom + "px";
+              console.log(e);
+            }, 100 * i);
+          });
+        } else {
+          add.style.display = "block";
+          remove.style.display = "none";
+          btn.forEach((e, i) => {
+            e.style.bottom = "0px";
+          });
+        }
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/pngegg_prev_ui.png">
+        </div>
+
+        <div class="about-text">
+            <span><br>APPROVED TITLES</span>
+            <p><br>Feasibility Study of Ampalaya Wine as essential Medicine for Reducing risk of Heart Disease</p>
+            <p><br>Feasibility Study of making Edible Straw and Cup using gelatin as Bio-plastic solution</p>
+            <p><br>Feasibility Study of Rice Grain with Alternative Filter as a Steep Coffee</p>
+            <a href="#menu" class="btn"> Scroll Down</a>
+
+        </div>
+    </section>
+
+    <!-------AMPALAYA------->
+
+    <section class="menu" id="menu">
+        <div class="container reveal">
+        <div class="heading">
+            <span><br><br>Ampalaya Wine</span>
+            <h2>Feasibility Study of Ampalaya Wine as essential Medicine for Reducing risk of Heart Disease</h2>
+            <p><br>Ampalaya has been a folkloric cure for generations but has now been proven to be an effective herbal medicine for many aliments. Most significant of which is for Diabetes. The Philippine variety has proven to be most potent. Ampalaya contains a mixture of flavanoids and alkaloids make the Pancreas produce more insulin that controls the blood sugar in diabetics. Aside from Diabetes, Ampalaya can also help reduce the risk of having a heart disease and it is also a good source of vitamins A, B and C, iron, folic acid, phosphorous and calcium.</p>
+            <p><br></p>
+            <a href="#ampalaya" class="btn"> Benefits/Tmarket</a>
+        </div>
+        </div>
+        <script>
+            window.addEventListener('scroll', reveal);
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal')
+    
+                for(var i = 0; i < reveals.lenght; i++){
+    
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+    
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+                }
+            }
+    
+        </script>
+    </section>
+
+    <!--------EDIBLE STRAWS---------->
+
+    <section class="service" id="service">
+        <div class="container reveal">
+        <div class="edible">
+            <span><br><br>Edible Straws/Cups</span>
+            <h2>Feasibility Study of making Edible Straw and Cup using gelatin as Bio-plastic solution</h2>
+            <p><br>This invention lies in the field of food products. This study relates to an edible straw and cup. The straw and cup is entirely edible, maintains its shape for an extended period of time, and provides nutritional benefits as a breakfast and/or snack food. The straw is primarily for children yet adults will enjoy the novelty as well. The straw contributes significant amounts of complex carbohydrates, protein, beneficial fats, fiber, phytonutrients, vitamins, and minerals to the consumer.</p>
+            <p><br></p>
+            <a href="#ediblesc" class="btn"> Benefits/Tmarket</a>
+        </div>
+        </div>
+        <script>
+            window.addEventListener('scroll', reveal);
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal')
+    
+                for(var i = 0; i < reveals.lenght; i++){
+    
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+    
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+                }
+            }
+    
+        </script>
+    </section>
+
+    <!----------RICE-------->
+   
+    <section class="contact" id="contact">
+        <div class="container reveal">
+        <div class="rice">
+            <span><br><br>Rice Grain Steep Coffee</span>
+            <h2>Feasibility Study of Rice Grain with Alternative Filter as a Steep Coffee</h2>
+            <p><br>Rice coffee is a coffee substitute made from roasted rice. It is a common drink in Japan and in Asian countries. The drink is made from roasted brown rice, water, and a sweetener. The drink is believed to have multiple health benefits, such as lowering blood pressure and preventing heart disease. People who use rice coffee reported having a more balanced diet, losing weight, and generally feeling healthier.</p>
+            <p><br></p>
+            <a href="#rice2" class="btn"> Benefits/Tmarket</a>
+
+        </div>
+
+    </div>
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+
+            for(var i = 0; i < reveals.lenght; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+            }
+        }
+
+    </script>
+    </section>
+
+   
+
+    <!-------AMPALAYA BENEFITS-------->
+    <section class="ampalaya" id="ampalaya">
+            <div class="amp-text">
+                <h2><br>Advantages and Target Market</h2>
+                <p><br>*Anti-Inflammatory</p>
+                <p>*Anti-Oxidant</p>
+                <p>*Reduce heart disease</p>
+                <p>*Lowering bad Cholesterol Levels</p>
+                <a href="#menu" class="btn">Back</a>
+           </div>
+
+           <div class="riic">
+            <div class="ric">
+                <h2><br></h2>
+                <img src="img/elderly copy_prev_ui.png">
+                <img src="img/completion_prev_ui.png">
+                <img src="img/winee.png">
+            </div>
+    </div> 
+    </section>
+
+    <!---------edible benefits----------->
+    <section class="ediblesc" id="ediblesc">
+        <div class="ediblesc1">
+            <h2><br>Advantages and Target Market</h2>
+            <p><br>*Good for Environment</p>
+            <p>*They can be eaten</p>
+            <p>*Have different flavors</p>
+            <p>*Reduce Littering</p>
+            <a href="#service" class="btn">Back</a>
+       </div>
+
+       <div class="riic">
+        <div class="ric">
+            <h2><br></h2>
+            <img src="img/fastfoood1_copy-removebg-preview.png">
+            <img src="img/mcdonalds-5-logo-png-transparent.png">
+            <img src="img/jollibee-vector-logo.png">
+        </div>
+</div> 
+</section>
+
+ <!---------Rice benefits----------->
+ <section class="rice2" id="rice2">
+    <div class="rice-text">
+        <h2><br>Advantages and Target Market</h2>
+        <p><br>*Caffein-Free</p>
+        <p>*Boost Immune-System</p>
+        <p>*Help Weight loss effort</p>
+        <p>*Better sleep quality</p>
+        <a href="#contact" class="btn">Back</a>
+   </div>
+
+   <div class="riic">
+        <div class="ric">
+            <h2><br></h2>
+            <img src="img/coffeee_copy-removebg-preview.png">
+            <img src="img/cofshop.png">
+            <img src="img/completion_prev_ui.png">
+        </div>
+</div>  
+</section>
+
+
+<!---------LOGISTICS--------->
+
+    <section class="logistics" id="logistics">
+        <div class="sup">
+            <span>Market</span>
+            <p>To properly market our products, we will promote and advertise our product through this web page and to other Social media platform. We'll make sure that our contact or telephone number and social media accounts are linked to this web page for them to have a convenient way to place an order and ship them out through our local courier services.</p>
+        </div>
+
+        <div class="service-container">
+            <div class="logbox">
+                <img src="img/s1.png">
+                <h3>Manufacturer</h3>
+            </div>
+
+            <div class="logbox">
+                <img src="img/s2.png">
+                <h3>Wholesaler/Retailer</h3>
+            </div>
+
+            <div class="logbox">
+                <img src="img/Untitled design-2_prev_ui.png">
+                <h3>Consumer</h3>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+<!---------cta---------->
+    <section class="cta">
+        <h2>Making the world a place with healthy living</h2>
+        <a href="#" class="btn">GO GREEN</a>
+    </section>
+
+    <!------footer-------->
+    <section id="foot">
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>Menu Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">FS Titles</a></li>
+                        <li><a href="#menu">Ampalaya Wine</a></li>
+                        <li><a href="#service">Edible Straw/Cups</a></li>
+                        <li><a href="#contact">Rice Coffee</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col">
+                    <h4>Group Members</h4>
+                    <ul>
+                        <li><a href="#service">Ariestotle Acosta</a></li>
+                        <li><a href="#menu">Jim Juliano</a></li>
+                        <li><a href="#contact">Jan Patrick Flores</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Product Management</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h4>Contact Us</h4>
+                    <div class="social">
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-tiktok'></i></a>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+
+    </body>
+</html>
